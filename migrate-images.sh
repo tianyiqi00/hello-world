@@ -11,6 +11,6 @@ if [ -s /tmp/images.txt ]; then
     gsub(/^[^\/]+\//, "", dst);
     gsub("/", "_", dst);
   }
-  print "skopeo copy --multi-arch all docker://"$1" docker://registry.cn-beijing.aliyuncs.com/llaoj/"dst;
+  print "skopeo copy --multi-arch all docker://"$1" docker://crpi-v2l1ieaudbcci8vw.cn-beijing.personal.cr.aliyuncs.com/tyq07/"dst;
 }' | xargs -I {} sh -c "{}"
 fi
