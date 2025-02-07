@@ -18,4 +18,3 @@ jobs:
             --entrypoint /bin/sh \
             alpine:3.20 -c \
               'apk update && apk add skopeo && skopeo -v && skopeo login -u "${{ secrets.ALI_REGISTRY_USERNAME }}" -p "${{ secrets.ALI_REGISTRY_PASSWORD }}" crpi-v2l1ieaudbcci8vw.cn-beijing.personal.cr.aliyuncs.com && chmod 777 /tmp/migrate-images.sh && /tmp/migrate-images.sh'
-          bash ./migrate-files.sh "${{ secrets.OSS_ACCESS_KEY_ID }}" "${{ secrets.OSS_ACCESS_KEY }}"
